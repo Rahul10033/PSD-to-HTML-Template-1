@@ -1,0 +1,115 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+a,
+a:hover,
+a:visited {
+    text-decoration: none;
+    cursor: pointer
+}
+
+
+
+// heading property reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+// paragraph property reset
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+// paragraph property reset
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+// flex 
+.flex {
+    display: flex;
+    &-space-between {
+        justify-content: space-between;
+    }
+    &-center {
+        justify-content: center;
+    }
+    &-align-center {
+        align-items: center;
+    }
+    &-column {
+        flex-direction: column;
+    }
+    &-wrap {
+        flex-wrap:wrap;
+    }
+}
+
+// ul style reset
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+// container
+.container {
+    @include container
+}
+
+// section text
+.subtitle {
+    font-size: $font-default;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $app-light
+}
+
+.title {
+    font-size: $font-sec-title;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $app-light;
+    &>span {
+        color: $app-secondary
+    }
+}
+
+.mb-32{
+    margin-bottom:$mb-32
+}
+
+figure{
+    margin:0;
+    padding:0
+}

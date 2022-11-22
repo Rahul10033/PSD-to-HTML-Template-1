@@ -1,0 +1,246 @@
+
+.footer {
+
+  position:relative;
+   
+  &__firebg{
+    position:absolute;
+    bottom:45px;
+    height:200px
+  }
+  &__fireleft{
+    left:3%
+  }
+  &__fireright{
+    right:3%
+  }
+
+ 
+  background-color: $app-footer;
+  padding-top: $pt-100;
+
+  &__formwrap {
+    background-color: $app-footer;
+    padding: 2rem 3rem;
+    margin-top: -140px;
+    border-radius: 50px;
+
+    .form__label {
+      font-size: $font-card-title;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      &>span {
+        color: $app-secondary
+      }
+
+    }
+
+    button[type="submit"] {
+      padding: 15px 17px;
+      text-transform: uppercase;
+      transform: skew(-20deg);
+      background-color: $app-secondary;
+      border: 0px;
+      margin-left: 10px;
+      font-size: $font-link;
+      display: inline-block;
+      font-weight: 700;
+
+      span {
+        transform: skew(20deg);
+      }
+    }
+  }
+
+  // footer linksitem block design
+
+  .footer__grid {
+
+    @include breakpoints-up(small) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left:-15px;
+      margin-right:-15px
+    }
+
+    .footer__griditem {
+      padding: 15px;
+
+      @include breakpoints-up(small) {
+        flex: 0 0 50%;
+      }
+
+      @include breakpoints-up(large) {
+        flex: 0 0 25%;
+      }
+    }
+
+    .footer__link,
+    li {
+      color: $app-link;
+      text-transform: capitalize;
+      font-size: $font-default;
+    }
+
+    li {
+      margin-bottom: 1rem
+    }
+
+    .footer__logo {
+      margin-bottom: 1rem;
+    }
+
+    .footer__linktitle {
+      color: $app-secondary;
+      text-transform: uppercase;
+      font-size: $font-default;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 3rem;
+
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 20px;
+        transition: all .4s;
+        height: 2px;
+        background: $app-secondary;
+        left: 0;
+        bottom: -10px;
+        animation: before 3s infinite;
+
+        @keyframes before {
+          0% {
+            width: 0%
+          }
+
+          25% {
+            width: 100%
+          }
+
+          75% {
+            width: 100%
+          }
+
+          100% {
+            width: 0%
+          }
+        }
+      }
+
+    }
+
+     .newslatter__form{
+        input[type="text"]{
+          padding:1rem;
+          background:$black;
+          color:$app-link
+        }
+
+        a[type="submit"]{
+          padding:.7rem;
+          background-color: $app-secondary;
+          cursor: pointer;
+        }
+     }
+
+    .footer__social {
+      margin-bottom: 2rem;
+
+      .footer__link {
+        margin-right: 10px;
+      }
+    }
+
+  }
+
+  // footer copywrite
+
+  &__copywrite {
+    background-color: $black;
+    padding: .5rem 0;
+    text-transform: capitalize;
+    .copywrite__text {
+      color: $app-link;
+      font-size: $font-link;
+      margin-bottom: 0;
+      span {
+        color: $app-secondary;
+        font-size: $font-default;
+        font-weight: 700;
+      }
+    }
+
+    .copywrite__image{
+      margin-top:4px;
+      img{
+        margin:0px 1rem;
+      }
+    }
+
+  }
+
+ 
+}
+
+
+// form design
+
+ // input and button design
+ input[type="text"] {
+  width: 100%;
+  margin: 8px 0;
+  outline: none;
+  border: 0px;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  text-transform: capitalize;
+  font-size: $font-link;
+}
+
+.inputwith__icon input[type="text"] {
+  padding-left: 40px;
+  color: $app-link;
+  transform: skew(20deg);
+  background-color: transparent;
+}
+
+.inputwith__icon {
+  position: relative;
+  transform: skew(-20deg);
+  background-color: $black;
+  width:12rem;
+  @include breakpoints-up(small) {
+    width:15rem;
+  }
+  @include breakpoints-up(large) {
+    width:20rem;
+  }
+  @include breakpoints-up(xlarge) {
+    width:24rem;
+  }
+  @include breakpoints-up(xxlarge) {
+    width:28rem;
+  }
+
+}
+
+.inputwith__icon img {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  padding: 9px 13px;
+  color: $app-secondary;
+  transition: 0.3s;
+  transform: skew(20deg);
+}
+
+.inputwith__icon.inputIconBg img {
+  color: $app-secondary;
+  padding: 9px 4px;
+  border-radius: 4px 0 0 4px;
+}

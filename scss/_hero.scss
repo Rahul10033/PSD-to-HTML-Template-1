@@ -1,0 +1,101 @@
+.hero {
+    background-image: url(/assets/images/hero_bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    &__grid {
+        @include breakpoints-up(small) {
+            display: flex;
+            margin-left:-15px;
+            margin-right:-15px
+        }
+        .grid__item {
+            padding:15px;
+            @include breakpoints-up(medium) {
+                flex: 1 0 50%;
+            }
+        }
+    }
+    &__text {
+        font-size: $font-hero-subtitle;
+        font-weight: 700;
+        color: $app-secondary;
+        margin-bottom: 0px;
+    }
+    &__title {
+        font-size: $font-hero-title;
+        font-weight: 700;
+        text-transform: capitalize;
+        color: $white;
+        &>span {
+            color: $app-secondary
+        }
+    }
+    &__discription {
+        font-size: $font-default;
+        font-weight: 500;
+        text-transform: capitalize;
+        color: $app-light;
+        margin-top: 1rem
+    }
+
+    .button_cta {
+        @include skew;
+        background-color: $app-secondary;
+        font-size: $font-default;
+        padding: .9rem 2.5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all .4s;
+        font-weight: 700;
+        position: relative;
+        margin-top: 2rem;
+        &::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            background-color: $app-secondary;
+            width: 10px;
+            height: 100%;
+            top: 0;
+            right: -15px;
+            transition: all .4s;
+        }
+
+        &:hover{
+            box-shadow: 5px 5px 6px rgba(0, 0, 0, .5);
+    &::after {
+        right: 0px
+    }
+        }
+    }
+    
+
+    .owl-nav{
+        position:absolute;
+        display:block;
+        display:block;
+        width:100%;
+        bottom:50%
+    }
+    .owl-theme .owl-nav [class*=owl-] {
+        padding: .25rem 1.1rem;
+        font-size: 1.4rem;
+        border-radius:.25rem;
+        background-color: $app-secondary;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev{
+        position: absolute;
+        left:30px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next {
+        position: absolute;
+        right: 30px;
+       
+    }
+   
+    
+}

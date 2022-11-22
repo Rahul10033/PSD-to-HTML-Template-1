@@ -1,0 +1,94 @@
+.upcomingmatch {
+    background-image: url(/assets/images/live_bg.png);
+    background-position: center center;
+    background-size: content;
+    background-repeat: no-repeat;
+    padding: 100px 0px;
+
+    &__grid {
+        @include breakpoints-up(medium) {
+            display: flex;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .grid__item {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            position: relative;
+            @include breakpoints-up(medium) {
+                flex: 1 0 33.33%;
+                padding: 15px;
+            }
+        }
+    }
+
+    &__figure {
+        position: relative;
+        img:not(img.circulardot){
+            position: absolute;
+            top:70px
+        }
+        img#eagle{
+            left:0 
+        }
+        img#hunter{
+            right:0
+        }
+
+    }
+
+    .upcomingmatch__caption {
+        text-align: center;
+        position: relative;
+
+        &>.caption__text {
+            color: $white;
+            font-size: $font-link;
+            display: inline-block;
+            padding: 5px 15px;
+            background-color: $app-secondary;
+        }
+        &>.caption__time {
+            font-size: $font-hero-title;
+            font-weight: 700;
+            margin-top:40px
+        }
+
+        @include breakpoints-up(xlarge) {
+            &>.caption__time {
+                position: absolute;
+                margin-top:0px;
+                left: 20%;
+                top: 40%;
+
+                &::after,
+                &::before {
+                    position: absolute;
+                    content: '';
+                    display: inline-block;
+                    background-color: $app-link;
+                    height: 4px;
+                    width: 70px;
+                    top: 50%
+                }
+
+                &::after {
+                    right: -100px
+                }
+
+                &::before {
+                    left: -100px
+                }
+            }
+        }
+    }
+
+   
+    .owl-theme .owl-nav.disabled + .owl-dots {
+        position: absolute !important;
+        left: 50%;
+    }
+
+    
+}

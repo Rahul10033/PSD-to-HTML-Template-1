@@ -1,0 +1,30 @@
+//  theme colors variables 
+$darkGray: hsl(232, 17%, 17%);
+$darkGrayfooter: hsl(290, 11%, 11%);
+$darkYellow: hsl(42, 99%, 46%);
+//  grays color variables 
+$white: hsl(0, 0%, 100%);
+$lightGray: hsl(0, 0%, 97%);
+$lightGray-200: hsl(60, 14%, 89%);
+$black: hsl(0, 0%, 0%);
+// app theme-color-variables
+$app-primary: $darkGray;
+$app-secondary: $darkYellow;
+$app-light: $lightGray;
+$app-link: $lightGray-200;
+$app-footer: $darkGrayfooter;
+// font variable
+
+$font-link:0.75rem;
+$font-default:0.875rem;
+$font-hero-subtitle:1.3rem;
+$font-sec-title: 1.8rem;
+$font-card-title:1.3rem;
+$font-hero-title: 3.5rem;
+
+// margin, padding
+
+$mb-32:2rem;
+$mt-32:2rem;
+$pt-100:6.25rem;
+$pb-100:6.25rem
